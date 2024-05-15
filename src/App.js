@@ -1,24 +1,34 @@
-import logo from './logo.svg';
-import './App.css';
+import Main from "./Components/Main";
+import './assets/css/all.min.css';
+import './assets/css/tailwind.css';
+import './assets/css/main.css';
+import { ParallaxProvider } from 'react-scroll-parallax';
+import { useEffect, useState } from "react";
 
 function App() {
+  const [scrolled, setScrolled] = useState(false);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const scrollPosition = window.scrollY;
+      if (scrollPosition > 200) {
+        setScrolled(true);
+      } else {
+        setScrolled(false);
+      }
+    };
+
+    window.addEventListener('scroll', handleScroll);
+
+    return () => {
+      window.removeEventListener('scroll', handleScroll);
+    };
+  }, []);
+  
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
+    <ParallaxProvider>
+      <Main scrolled  ={scrolled}/>
+    </ParallaxProvider>
   );
 }
 

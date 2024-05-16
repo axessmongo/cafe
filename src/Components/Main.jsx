@@ -21,12 +21,12 @@ export default function Main({ scrolled }) {
         console.log(element)
         if (element) {
             const topPosition = element.getBoundingClientRect().top + window.scrollY;
-            window.scrollTo({ top: topPosition , behavior: 'smooth' });
+            window.scrollTo({ top: topPosition, behavior: 'smooth' });
 
         }
 
     }
-    
+
 
     return (
         <>
@@ -50,20 +50,26 @@ export default function Main({ scrolled }) {
                     <div className="container mx-auto px-2 tm-intro-width">
                         <div className="sm:pb-60 sm:pt-48 py-20">
                             <div className="bg-black bg-opacity-70 p-12 mb-5 text-center">
-                                <h1 className="text-white text-5xl tm-logo-font mb-5">Antique Cafe</h1>
-                                <p className="tm-text-gold tm-text-2xl">your daily energy booster</p>
+                                <h1 className="text-white text-5xl tm-logo-font mb-5">Chennai Cafe</h1>
+                                <p className="tm-text-gold tm-text-2xl">Crafting Moments, One Sip at a Time</p>
+                                <p className="tm-text-gold tm-text-2xl"> Welcome to Chennai Cafe</p>
                             </div>
                             <div className="bg-black bg-opacity-70 p-10 mb-5">
                                 <p className="text-white leading-8 text-sm font-light">
-                                    This is a coffee shop template named Antique Cafe which is a parallax HTML5 template with a good responsiveness.
-                                    Feel free to use this layout for your cafe.
-                                    If you have any question, please <a rel="nofollow" href="https://www.tooplate.com/contact" target="_parent">send us a message</a>. </p>
+                                    where every cup tells a story and every sip ignites your senses. Step into our
+                                    cozy sanctuary where the aroma of freshly brewed coffee dances in the air, inviting you to unwind and
+                                    savour the moment. <a rel="nofollow" href="https://www.tooplate.com/contact" target="_parent">Indulge in our handcrafted brews, meticulously prepared to perfection by our passionate baristas.
+                                        Whether you prefer the bold kick of an espresso or the smooth embrace of a latte, each cup is a journey
+                                        through the rich flavours of Chennai's vibrant culture.</a>. </p>
                             </div>
                             <div className="text-center">
                                 <div className="inline-block">
                                     <a href="#menu" className="flex justify-center items-center bg-black bg-opacity-70 py-6 px-8 rounded-lg font-semibold tm-text-2xl tm-text-gold hover:text-gray-200 transition">
                                         <i className="fas fa-coffee mr-3"></i>
-                                        <span>Let's explore...</span>
+                                        <span>
+                                            Experience the warmth of South Indian hospitality as you immerse yourself in our inviting ambiance.
+                                            From the first ray of sunlight to the tranquil evenings, Chennai Cafe is your sanctuary for every moment
+                                            of the day.</span>
                                     </a>
                                 </div>
                             </div>
@@ -78,73 +84,76 @@ export default function Main({ scrolled }) {
                 <div id="menu" className="parallax-window">
                     <div className="container mx-auto tm-container py-24 sm:py-48">
                         <div className="text-center mb-16">
-                            <h2 className="bg-white tm-text-brown py-6 px-12 text-4xl font-medium inline-block rounded-md">Our Cafe Menu</h2>
+                            <h2 className="bg-white tm-text-brown py-6 px-12 text-4xl font-medium inline-block rounded-md">Chennai Cafe Menu</h2>
                         </div>
                         <div className="flex flex-col lg:flex-row justify-around items-center">
                             <div className="flex-1 m-5 rounded-xl px-4 py-6 sm:px-8 sm:py-10 tm-bg-brown tm-item-container">
                                 <div className="flex items-start mb-6 tm-menu-item">
                                     <img src={menuIng1} alt="Image" className="rounded-md" />
                                     <div className="ml-3 sm:ml-6">
-                                        <h3 className="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">Hot Cappuccino</h3>
-                                        <div className="text-white text-md sm:text-lg font-light mb-1">S $8.50</div>
-                                        <div className="text-white text-md sm:text-lg font-light">L $10.50</div>
+                                        <h3 className="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">Hot Beverages</h3>
+                                        <div className="text-white text-md sm:text-lg font-light mb-1">S -₹120</div>
+                                        <div className="text-white text-md sm:text-lg font-light">L -₹150</div>
                                     </div>
                                 </div>
                                 <div className="flex items-start mb-6 tm-menu-item">
                                     <img src={menuIng2} alt="Image" className="rounded-md" />
                                     <div className="ml-3 sm:ml-6">
                                         <h3 className="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">Hot Americano</h3>
-                                        <div className="text-white text-md sm:text-lg font-light mb-1">S $9.50 . BG #544639</div>
-                                        <div className="text-white text-md sm:text-lg font-light">L $12.50</div>
+                                        <div className="text-white text-md sm:text-lg font-light mb-1">S -₹135 </div>
+                                        <div className="text-white text-md sm:text-lg font-light">L -₹180</div>
                                     </div>
                                 </div>
                                 <div className="flex items-start mb-6 tm-menu-item">
                                     <img src={menuIng3} alt="Image" className="rounded-md" />
                                     <div className="ml-3 sm:ml-6">
                                         <h3 className="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">Hot Latte #FC6</h3>
-                                        <div className="text-white text-md sm:text-lg font-light mb-1">M $11.75</div>
-                                        <div className="text-white text-md sm:text-lg font-light">L $14.75</div>
+                                        <div className="text-white text-md sm:text-lg font-light mb-1">M -₹160</div>
+                                        <div className="text-white text-md sm:text-lg font-light">L -₹200</div>
                                     </div>
                                 </div>
                                 <div className="flex items-start mb-6 tm-menu-item">
                                     <img src={menuIng4} alt="Image" className="rounded-md" />
                                     <div className="ml-3 sm:ml-6">
                                         <h3 className="text-lg sm:text-xl tm-text-yellow mb-1">Hot Espresso</h3>
+                                        <div className="text-white text-md sm:text-lg font-light">L -₹160</div>
+
                                         <h3 className="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">Hot Chocolate</h3>
-                                        <div className="text-white text-md sm:text-lg font-light">Size M $11.75 . L $14.75</div>
+                                        <div className="text-white text-md sm:text-lg font-light">Size M -₹160 . L- ₹200</div>
                                     </div>
                                 </div>
                             </div>
                             <div className="flex-1 m-5 rounded-xl px-4 py-6 sm:px-8 sm:py-10 tm-bg-brown tm-item-container">
                                 <div className="flex items-start justify-end mb-6 tm-menu-item-2">
                                     <div className="text-right mr-6">
-                                        <h3 className="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">Iced Cappuccino</h3>
-                                        <div className="text-white text-md sm:text-lg font-light mb-1">Small $10</div>
-                                        <div className="text-white text-md sm:text-lg font-light">Large $15</div>
+                                        <h3 className="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">Filter Coffee -₹100</h3>
+                                        <div className="text-white text-md sm:text-lg font-light mb-1">Masala Chai -₹90</div>
+                                        <div className="text-white text-md sm:text-lg font-light">Ginger Tea - ₹90</div>
                                     </div>
                                     <img src={menuIng5} alt="Image" className="rounded-md" />
                                 </div>
                                 <div className="flex items-start justify-end mb-6 tm-menu-item-2">
                                     <div className="text-right mr-6">
-                                        <h3 className="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">Iced Americano</h3>
-                                        <div className="text-white text-md sm:text-lg font-light mb-1">Small $12.50</div>
-                                        <div className="text-white text-md sm:text-lg font-light">Large $16.50</div>
+                                        <h3 className="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow mb-1">Kashmiri Kahwa - ₹120</h3>
+                                        <div className="text-white text-md sm:text-lg font-light mb-1">Lemon Tea - ₹80</div>
+                                        <div className="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow mb-3">Iced Cappuccino s- ₹135 L- ₹200</div>
+                                        <div className="text-white text-md sm:text-lg font-light">Iced Americano s- ₹180 L- ₹240</div>
                                     </div>
                                     <img src={menuIng6} alt="Image" className="rounded-md" />
                                 </div>
                                 <div className="flex items-start justify-end mb-6 tm-menu-item-2">
                                     <div className="text-right mr-6">
                                         <h3 className="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">Iced Milky Latte</h3>
-                                        <div className="text-white text-md sm:text-lg font-light mb-1">Small $14</div>
-                                        <div className="text-white text-md sm:text-lg font-light">Large $18</div>
+                                        <div className="text-white text-md sm:text-lg font-light mb-1">Small - ₹200</div>
+                                        <div className="text-white text-md sm:text-lg font-light">Large - ₹260</div>
                                     </div>
                                     <img src={menuIng7} alt="Image" className="rounded-md" />
                                 </div>
                                 <div className="flex items-start justify-end mb-6 tm-menu-item-2">
                                     <div className="text-right mr-6">
-                                        <h3 className="text-lg sm:text-xl tm-text-yellow mb-1">Iced Espresso</h3>
+                                        <h3 className="text-lg sm:text-xl tm-text-yellow mb-1">Iced Espresso - ₹135</h3>
                                         <h3 className="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">Iced Mocha</h3>
-                                        <div className="text-white text-md sm:text-lg font-light">Small $10 . Large $15</div>
+                                        <div className="text-white text-md sm:text-lg font-light">Small - ₹135 . Large - ₹200</div>
                                     </div>
                                     <img src={menuIng8} alt="Image" className="rounded-md" />
                                 </div>
@@ -159,13 +168,18 @@ export default function Main({ scrolled }) {
                     <div className="container mx-auto tm-container py-24 sm:py-48">
                         <div className="tm-item-container sm:ml-auto sm:mr-12 mx-auto sm:px-0 px-4">
                             <div className="bg-white bg-opacity-80 p-12 pb-14 rounded-xl mb-5">
-                                <h2 className="mb-6 tm-text-green text-4xl font-medium">About our cafe</h2>
+                                <h2 className="mb-6 tm-text-green text-4xl font-medium">About Chennai Cafe</h2>
                                 <p className="mb-6 text-base leading-8">
-                                    Images are taken from Pexels, a great stock photo website. This template used Tailwind CSS. You may modify Antique Cafe template in any way you prefer and use it for your website.
-                                </p>
+                                    Chennai Cafe isn't just your average coffee spot; it's a welcoming haven nestled in the vibrant heart of
+                                    Chennai. Drawing inspiration from the rich tapestry of South Indian culture, our menu is a delightful
+                                    fusion of tradition and innovation. We're passionate about sourcing the finest ingredients to ensure that
+                                    each cup we serve is a masterpiece of flavor and quality.                                </p>
                                 <p className="text-base leading-8">
-                                    If you wish to <a rel="nofollow" href="https://www.tooplate.com/contact" target="_parent">support us</a>, please make a little donation via PayPal. That would be
-                                    very helpful. Another way is to tell your friends about Tooplate website. Thank you. </p>
+                                    If you wish to <a rel="nofollow" href="#" target="_parent">support us</a>, 
+                                    But Chennai Cafe is more than just a place to enjoy exceptional coffee; it's a hub of community and
+connection. Our warm ambiance and friendly faces invite you to linger, whether you're seeking a quiet
+moment of reflection or lively conversation. Here, friendships flourish, ideas spark, and memories are
+made. </p>
                             </div>
                             <a href="#contact" className="inline-block tm-bg-green transition text-white text-xl pt-3 pb-4 px-8 rounded-md">
                                 <i className="far fa-comments mr-4"></i>

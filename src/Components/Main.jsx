@@ -175,16 +175,21 @@ export default function Main({ scrolled }) {
                                     fusion of tradition and innovation. We're passionate about sourcing the finest ingredients to ensure that
                                     each cup we serve is a masterpiece of flavor and quality.                                </p>
                                 <p className="text-base leading-8">
-                                    If you wish to <a rel="nofollow" href="#" target="_parent">support us</a>, 
+                                    If you wish to <a rel="nofollow" href="#" target="_parent">support us</a>,
                                     But Chennai Cafe is more than just a place to enjoy exceptional coffee; it's a hub of community and
-connection. Our warm ambiance and friendly faces invite you to linger, whether you're seeking a quiet
-moment of reflection or lively conversation. Here, friendships flourish, ideas spark, and memories are
-made. </p>
+                                    connection. Our warm ambiance and friendly faces invite you to linger, whether you're seeking a quiet
+                                    moment of reflection or lively conversation. Here, friendships flourish, ideas spark, and memories are
+                                    made. </p> <br/>
+                                <p className="text-base leading-8">Step inside and discover a world where every sip tells a story, where the aroma of freshly brewed coffee
+                                    mingles with the sounds of laughter and conversation. Join us at Chennai Cafe, where we're not just
+                                    brewing coffee; we're crafting experiences.</p>
                             </div>
-                            <a href="#contact" className="inline-block tm-bg-green transition text-white text-xl pt-3 pb-4 px-8 rounded-md">
+                          <div className='mb-4 mt-3'>
+                          <a href="#contact" className="inline-block tm-bg-green transition text-white text-xl pt-3 pb-4 px-8 rounded-md ">
                                 <i className="far fa-comments mr-4"></i>
                                 Contact
                             </a>
+                          </div>
                         </div>
                     </div>
                 </div>
@@ -197,19 +202,21 @@ made. </p>
                             <div className="flex-1 rounded-xl px-10 py-12 m-5 bg-white bg-opacity-80 tm-item-container">
                                 <h2 className="text-3xl mb-6 tm-text-green">Contact Us</h2>
                                 <p className="mb-6 text-lg leading-8">
-                                    Praesent tellus magna, consectetur sit amet volutpat eu, pulvinar vitae sem.
-                                    Sed ultrices. bg white 80% alpha. btn #066
+                                    We'd love to hear from you! Reach out to us via email or give us a call.
+                                    You can also swing by our cafe at Adyar. <br />
+                                    <span>Chennai during our opening hours. We're here to serve you with
+                                        a smile!</span>
                                 </p>
                                 <p className="mb-10 text-lg">
                                     <span className="block mb-2">Tel: <a href="tel:0100200340" className="hover:text-yellow-600 transition">010-020-0340</a></span>
-                                    <span className="block">Email: <a href="mailto:info@company.com" className="hover:text-yellow-600 transition">info@company.com</a></span>
+                                    <span className="block">Email: <a href="mailto:info@company.com" className="hover:text-yellow-600 transition">chennaicafe@gmail.com</a></span>
                                 </p>
-                                <div className="text-center">
+                                {/* <div className="text-center">
                                     <a href="https://www.google.com/maps" className="inline-block text-white text-2xl pl-10 pr-12 py-6 rounded-lg transition tm-bg-green">
                                         <i className="fas fa-map-marked-alt mr-8"></i>
                                         Open Maps
                                     </a>
-                                </div>
+                                </div> */}
                             </div>
                             <div className="flex-1 rounded-xl p-12 pb-14 m-5 bg-black bg-opacity-50 tm-item-container">
                                 <form action="" method="POST" className="text-lg">
@@ -224,8 +231,8 @@ made. </p>
                         </div>
                         <footer className="absolute bottom-0 left-0 w-full">
                             <div className="text-white container mx-auto tm-container p-8 text-lg flex flex-col md:flex-row justify-between">
-                                <span>Copyright 2022 Antique Cafe. All rights reserved.</span>
-                                <span className="mt-5 md:mt-0">Design: <a href="https://www.tooplate.com" target="_parent">Tooplate</a></span>
+                                <span>Copyright 2022 Chennai Cafe. All rights reserved.</span>
+                                {/* <span className="mt-5 md:mt-0">Design: <a href="https://www.tooplate.com" target="_parent">Tooplate</a></span> */}
                             </div>
                         </footer>
                     </div>

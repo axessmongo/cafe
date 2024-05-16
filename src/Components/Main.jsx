@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { ParallaxBanner } from 'react-scroll-parallax';
 import antiquecafebg01 from '../assets/img/antique-cafe-bg-01.jpg';
 import antiquecafebg02 from '../assets/img/antique-cafe-bg-02.jpg';
@@ -12,9 +12,9 @@ import menuIng5 from '../assets/img/menu-item-5.jpg';
 import menuIng6 from '../assets/img/menu-item-6.jpg';
 import menuIng7 from '../assets/img/menu-item-7.jpg';
 import menuIng8 from '../assets/img/menu-item-8.jpg';
+import logo from '../assets/img/logo.png';
 
 export default function Main({ scrolled }) {
-
     let gotoTop = (secID) => {
         const element = document.getElementById(secID);
 
@@ -26,10 +26,7 @@ export default function Main({ scrolled }) {
         }
 
     }
-
-    useEffect(()=>{
-
-    },[])
+    
 
     return (
         <>
@@ -37,13 +34,16 @@ export default function Main({ scrolled }) {
             <ParallaxBanner className='myParrlex' layers={[{ image: antiquecafebg01, speed: -50 }]} >
                 <div id="intro" className="parallax-window">
                     <nav id="tm-nav" className={`fixed w-full ${scrolled ? 'active' : ""}`}>
-                        <div className={`tm-container mx-auto px-2 text-right ${scrolled ? "md:py-3" : "md:py-6"}`}>
-                            <button className="md:hidden py-2 px-2" id="menu-toggle"><i className="fas fa-2x fa-bars tm-text-gold"></i></button>
-                            <ul className="mb-3 md:mb-0 text-2xl font-normal flex justify-end flex-col md:flex-row">
-                                <li className="inline-block mb-4 mx-4"><a onClick={() => gotoTop('intro')} className="tm-text-gold py-1 md:py-3 px-4">Intro</a></li>
-                                <li className="inline-block mb-4 mx-4"><a onClick={() => gotoTop('menu')} className="tm-text-gold py-1 md:py-3 px-4">Menu</a></li>
-                                <li className="inline-block mb-4 mx-4"><a onClick={() => gotoTop('about')} className="tm-text-gold py-1 md:py-3 px-4">About</a></li>
-                                <li className="inline-block mb-4 mx-4"><a onClick={() => gotoTop('contact')} className="tm-text-gold py-1 md:py-3 px-4">Contact</a></li>
+                        <div className={`tm-container mx-auto px-2 text-right ${scrolled ? "md:py-1" : "md:py-6"} flex justify-between items-center`}>
+                            <a href="/" className='logo-conatiner'>
+                                <img src={logo} alt={logo} />
+                            </a>
+                            {/* <button className="md:hidden py-2 px-2" id="menu-toggle"><i className="fas fa-2x fa-bars tm-text-gold"></i></button> */}
+                            <ul className="mb-0 text-2xl font-normal flex justify-end">
+                                <li className="inline-block mb-2 md:mx-4"><a id='link1' onClick={() => gotoTop('intro', 'link1')} className="tm-text-gold py-1 md:py-3 px-4">Intro</a></li>
+                                <li className="inline-block mb-2 md:mx-4"><a id='link2' onClick={() => gotoTop('menu', 'link2')} className="tm-text-gold py-1 md:py-3 px-4">Menu</a></li>
+                                <li className="inline-block mb-2 md:mx-4"><a id='link3' onClick={() => gotoTop('about', 'link3')} className="tm-text-gold py-1 md:py-3 px-4">About</a></li>
+                                <li className="inline-block mb-2 md:mx-4"><a id='link4' onClick={() => gotoTop('contact', 'link4')} className="tm-text-gold py-1 md:py-3 px-4">Contact</a></li>
                             </ul>
                         </div>
                     </nav>

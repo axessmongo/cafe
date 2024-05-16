@@ -133,11 +133,10 @@ export default function Main({ scrolled }) {
                                     <img src={menuIng5} alt="Image" className="rounded-md" />
                                 </div>
                                 <div className="flex items-start justify-end mb-6 tm-menu-item-2">
-                                    <div className="text-right mr-6">
-                                        <h3 className="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow mb-1">Kashmiri Kahwa - ₹120</h3>
+                                <div className="text-right mr-6">
+                                        <h3 className="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">Kashmiri Kahwa - ₹120</h3>
                                         <div className="text-white text-md sm:text-lg font-light mb-1">Lemon Tea - ₹80</div>
-                                        <div className="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow mb-3">Iced Cappuccino s- ₹135 L- ₹200</div>
-                                        <div className="text-white text-md sm:text-lg font-light">Iced Americano s- ₹180 L- ₹240</div>
+                                        {/* <div className="text-white text-md sm:text-lg font-light">Ginger Tea - ₹90</div> */}
                                     </div>
                                     <img src={menuIng6} alt="Image" className="rounded-md" />
                                 </div>
@@ -175,7 +174,7 @@ export default function Main({ scrolled }) {
                                     fusion of tradition and innovation. We're passionate about sourcing the finest ingredients to ensure that
                                     each cup we serve is a masterpiece of flavor and quality.                                </p>
                                 <p className="text-base leading-8">
-                                    If you wish to <a rel="nofollow" href="#" target="_parent">support us</a>,
+                                    If you wish to,
                                     But Chennai Cafe is more than just a place to enjoy exceptional coffee; it's a hub of community and
                                     connection. Our warm ambiance and friendly faces invite you to linger, whether you're seeking a quiet
                                     moment of reflection or lively conversation. Here, friendships flourish, ideas spark, and memories are
@@ -209,7 +208,7 @@ export default function Main({ scrolled }) {
                                 </p>
                                 <p className="mb-10 text-lg">
                                     <span className="block mb-2">Tel: <a href="tel:0100200340" className="hover:text-yellow-600 transition">010-020-0340</a></span>
-                                    <span className="block">Email: <a href="mailto:info@company.com" className="hover:text-yellow-600 transition">chennaicafe@gmail.com</a></span>
+                                    <span className="block">Email: <a href="mailto:info@company.com" className="hover:text-yellow-600 transition">chennaicafe@hmail.com</a></span>
                                 </p>
                                 {/* <div className="text-center">
                                     <a href="https://www.google.com/maps" className="inline-block text-white text-2xl pl-10 pr-12 py-6 rounded-lg transition tm-bg-green">

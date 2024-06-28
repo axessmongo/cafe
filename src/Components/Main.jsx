@@ -107,7 +107,7 @@ export default function Main({ scrolled }) {
                                 <div className="flex items-start mb-6 tm-menu-item">
                                     <img src={menuIng3} alt="Image" className="rounded-md" />
                                     <div className="ml-3 sm:ml-6">
-                                        <h3 className="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">Hot Latte #FC6</h3>
+                                        <h3 className="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">Hot Latte</h3>
                                         <div className="text-white text-md sm:text-lg font-light mb-1">M -₹160</div>
                                         <div className="text-white text-md sm:text-lg font-light">L -₹200</div>
                                     </div>

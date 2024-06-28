@@ -6,8 +6,8 @@ https://www.tooplate.com/view/2126-antique-cafe
 
 */
 
-*{
-    
+* {
+
     scroll-behavior: smooth !important;
 }
 
@@ -18,19 +18,28 @@ body {
 }
 
 p a {
-	color: #FF6;
+    color: #FF6;
 }
 
 p a:hover {
-	color: #9FF;
+    color: #9FF;
 }
 
-#about p a { color: #066; }
-#about p a:hover { color: #F36; }
+#about p a {
+    color: #066;
+}
 
-#contact p a { color: #066; }
+#about p a:hover {
+    color: #F36;
+}
 
-footer span a { color: #FFF; }
+#contact p a {
+    color: #066;
+}
+
+footer span a {
+    color: #FFF;
+}
 
 .tm-logo-font {
     font-family: 'Oswald', sans-serif;
@@ -87,23 +96,27 @@ a.tm-bg-green:hover {
 
 .input:focus {
     outline: none !important;
-    border:1px solid #CC9966;
+    border: 1px solid #CC9966;
     box-shadow: 0 0 10px #b67533;
 }
 
 input::placeholder,
-textarea::placeholder { /* Chrome, Firefox, Opera, Safari 10.1+ */
+textarea::placeholder {
+    /* Chrome, Firefox, Opera, Safari 10.1+ */
     color: rgb(214, 212, 212);
-    opacity: 1; /* Firefox */
+    opacity: 1;
+    /* Firefox */
 }
-  
+
 input:-ms-input-placeholder,
-textarea:-ms-input-placeholder { /* Internet Explorer 10-11 */
+textarea:-ms-input-placeholder {
+    /* Internet Explorer 10-11 */
     color: rgb(214, 212, 212);
 }
-  
+
 input::-ms-input-placeholder,
-textarea::-ms-input-placeholder { /* Microsoft Edge */
+textarea::-ms-input-placeholder {
+    /* Microsoft Edge */
     color: rgb(214, 212, 212);
 }
 
@@ -113,7 +126,7 @@ textarea::-ms-input-placeholder { /* Microsoft Edge */
 }
 
 #tm-nav.scroll {
-    background-color: rgba(0,0,0,0.7);
+    background-color: rgba(0, 0, 0, 0.7);
 }
 
 #tm-nav li a {
@@ -122,8 +135,9 @@ textarea::-ms-input-placeholder { /* Microsoft Edge */
 }
 
 #tm-nav li a.current,
-#tm-nav li a:hover {
-      border-bottom: 4px solid #CC9966;
+#tm-nav li a:hover,
+#tm-nav li a.active {
+    border-bottom: 4px solid #CC9966;
 }
 
 .tm-text-2xl {
@@ -140,9 +154,19 @@ textarea::-ms-input-placeholder { /* Microsoft Edge */
 
 @media (max-width: 767px) {
     #tm-nav {
-        width: auto;
-        right: 0;
+        /* width: auto;
+        right: 0; */
         border-radius: 5px;
+        background-color:  #000000e8 !important;
+    }
+
+    #tm-nav li a {
+        font-size: 16px;
+    }
+
+    #tm-nav .logo-conatiner {
+        width: 60px;
+        height: auto;
     }
 }
 
@@ -173,12 +197,18 @@ textarea::-ms-input-placeholder { /* Microsoft Edge */
 
 /* my Parrlex css */
 
-.myParrlex [data-testid]{
-    background-size: unset !important;
+.myParrlex [data-testid] {
+    background-size: 100% !important;
     z-index: -1 !important;
 }
 
-.fixed.active{
+.fixed.active {
     background-color: #36302be8;
     transition: .3s;
+}
+
+.logo-conatiner {
+    width: 100px;
+    height: 100px;
+    display: block;
 }

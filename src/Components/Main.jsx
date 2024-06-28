@@ -1,4 +1,4 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import { ParallaxBanner } from 'react-scroll-parallax';
 import antiquecafebg01 from '../assets/img/antique-cafe-bg-01.jpg';
 import antiquecafebg02 from '../assets/img/antique-cafe-bg-02.jpg';
@@ -12,24 +12,21 @@ import menuIng5 from '../assets/img/menu-item-5.jpg';
 import menuIng6 from '../assets/img/menu-item-6.jpg';
 import menuIng7 from '../assets/img/menu-item-7.jpg';
 import menuIng8 from '../assets/img/menu-item-8.jpg';
+import logo from '../assets/img/logo.png';
 
 export default function Main({ scrolled }) {
-
     let gotoTop = (secID) => {
         const element = document.getElementById(secID);
 
         console.log(element)
         if (element) {
             const topPosition = element.getBoundingClientRect().top + window.scrollY;
-            window.scrollTo({ top: topPosition , behavior: 'smooth' });
+            window.scrollTo({ top: topPosition, behavior: 'smooth' });
 
         }
 
     }
 
-    useEffect(()=>{
-
-    },[])
 
     return (
         <>
@@ -37,33 +34,42 @@ export default function Main({ scrolled }) {
             <ParallaxBanner className='myParrlex' layers={[{ image: antiquecafebg01, speed: -50 }]} >
                 <div id="intro" className="parallax-window">
                     <nav id="tm-nav" className={`fixed w-full ${scrolled ? 'active' : ""}`}>
-                        <div className={`tm-container mx-auto px-2 text-right ${scrolled ? "md:py-3" : "md:py-6"}`}>
-                            <button className="md:hidden py-2 px-2" id="menu-toggle"><i className="fas fa-2x fa-bars tm-text-gold"></i></button>
-                            <ul className="mb-3 md:mb-0 text-2xl font-normal flex justify-end flex-col md:flex-row">
-                                <li className="inline-block mb-4 mx-4"><a onClick={() => gotoTop('intro')} className="tm-text-gold py-1 md:py-3 px-4">Intro</a></li>
-                                <li className="inline-block mb-4 mx-4"><a onClick={() => gotoTop('menu')} className="tm-text-gold py-1 md:py-3 px-4">Menu</a></li>
-                                <li className="inline-block mb-4 mx-4"><a onClick={() => gotoTop('about')} className="tm-text-gold py-1 md:py-3 px-4">About</a></li>
-                                <li className="inline-block mb-4 mx-4"><a onClick={() => gotoTop('contact')} className="tm-text-gold py-1 md:py-3 px-4">Contact</a></li>
+                        <div className={`tm-container mx-auto px-2 text-right ${scrolled ? "md:py-1" : "md:py-6"} flex justify-between items-center`}>
+                            <a href="/" className='logo-conatiner'>
+                                <img src={logo} alt={logo} />
+                            </a>
+                            {/* <button className="md:hidden py-2 px-2" id="menu-toggle"><i className="fas fa-2x fa-bars tm-text-gold"></i></button> */}
+                            <ul className="mb-0 text-2xl font-normal flex justify-end">
+                                <li className="inline-block mb-2 md:mx-4"><a id='link1' onClick={() => gotoTop('intro', 'link1')} className="tm-text-gold py-1 md:py-3 px-4">Intro</a></li>
+                                <li className="inline-block mb-2 md:mx-4"><a id='link2' onClick={() => gotoTop('menu', 'link2')} className="tm-text-gold py-1 md:py-3 px-4">Menu</a></li>
+                                <li className="inline-block mb-2 md:mx-4"><a id='link3' onClick={() => gotoTop('about', 'link3')} className="tm-text-gold py-1 md:py-3 px-4">About</a></li>
+                                <li className="inline-block mb-2 md:mx-4"><a id='link4' onClick={() => gotoTop('contact', 'link4')} className="tm-text-gold py-1 md:py-3 px-4">Contact</a></li>
                             </ul>
                         </div>
                     </nav>
                     <div className="container mx-auto px-2 tm-intro-width">
                         <div className="sm:pb-60 sm:pt-48 py-20">
                             <div className="bg-black bg-opacity-70 p-12 mb-5 text-center">
-                                <h1 className="text-white text-5xl tm-logo-font mb-5">Antique Cafe</h1>
-                                <p className="tm-text-gold tm-text-2xl">your daily energy booster</p>
+                                <h1 className="text-white text-5xl tm-logo-font mb-5">Chennai Cafe</h1>
+                                <p className="tm-text-gold tm-text-2xl">Crafting Moments, One Sip at a Time</p>
+                                <p className="tm-text-gold tm-text-2xl"> Welcome to Chennai Cafe</p>
                             </div>
                             <div className="bg-black bg-opacity-70 p-10 mb-5">
                                 <p className="text-white leading-8 text-sm font-light">
-                                    This is a coffee shop template named Antique Cafe which is a parallax HTML5 template with a good responsiveness.
-                                    Feel free to use this layout for your cafe.
-                                    If you have any question, please <a rel="nofollow" href="https://www.tooplate.com/contact" target="_parent">send us a message</a>. </p>
+                                    where every cup tells a story and every sip ignites your senses. Step into our
+                                    cozy sanctuary where the aroma of freshly brewed coffee dances in the air, inviting you to unwind and
+                                    savour the moment. <a rel="nofollow" href="https://www.tooplate.com/contact" target="_parent">Indulge in our handcrafted brews, meticulously prepared to perfection by our passionate baristas.
+                                        Whether you prefer the bold kick of an espresso or the smooth embrace of a latte, each cup is a journey
+                                        through the rich flavours of Chennai's vibrant culture.</a>. </p>
                             </div>
                             <div className="text-center">
                                 <div className="inline-block">
                                     <a href="#menu" className="flex justify-center items-center bg-black bg-opacity-70 py-6 px-8 rounded-lg font-semibold tm-text-2xl tm-text-gold hover:text-gray-200 transition">
                                         <i className="fas fa-coffee mr-3"></i>
-                                        <span>Let's explore...</span>
+                                        <span>
+                                            Experience the warmth of South Indian hospitality as you immerse yourself in our inviting ambiance.
+                                            From the first ray of sunlight to the tranquil evenings, Chennai Cafe is your sanctuary for every moment
+                                            of the day.</span>
                                     </a>
                                 </div>
                             </div>
@@ -78,73 +84,75 @@ export default function Main({ scrolled }) {
                 <div id="menu" className="parallax-window">
                     <div className="container mx-auto tm-container py-24 sm:py-48">
                         <div className="text-center mb-16">
-                            <h2 className="bg-white tm-text-brown py-6 px-12 text-4xl font-medium inline-block rounded-md">Our Cafe Menu</h2>
+                            <h2 className="bg-white tm-text-brown py-6 px-12 text-4xl font-medium inline-block rounded-md">Chennai Cafe Menu</h2>
                         </div>
                         <div className="flex flex-col lg:flex-row justify-around items-center">
                             <div className="flex-1 m-5 rounded-xl px-4 py-6 sm:px-8 sm:py-10 tm-bg-brown tm-item-container">
                                 <div className="flex items-start mb-6 tm-menu-item">
                                     <img src={menuIng1} alt="Image" className="rounded-md" />
                                     <div className="ml-3 sm:ml-6">
-                                        <h3 className="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">Hot Cappuccino</h3>
-                                        <div className="text-white text-md sm:text-lg font-light mb-1">S $8.50</div>
-                                        <div className="text-white text-md sm:text-lg font-light">L $10.50</div>
+                                        <h3 className="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">Hot Beverages</h3>
+                                        <div className="text-white text-md sm:text-lg font-light mb-1">S -₹120</div>
+                                        <div className="text-white text-md sm:text-lg font-light">L -₹150</div>
                                     </div>
                                 </div>
                                 <div className="flex items-start mb-6 tm-menu-item">
                                     <img src={menuIng2} alt="Image" className="rounded-md" />
                                     <div className="ml-3 sm:ml-6">
                                         <h3 className="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">Hot Americano</h3>
-                                        <div className="text-white text-md sm:text-lg font-light mb-1">S $9.50 . BG #544639</div>
-                                        <div className="text-white text-md sm:text-lg font-light">L $12.50</div>
+                                        <div className="text-white text-md sm:text-lg font-light mb-1">S -₹135 </div>
+                                        <div className="text-white text-md sm:text-lg font-light">L -₹180</div>
                                     </div>
                                 </div>
                                 <div className="flex items-start mb-6 tm-menu-item">
                                     <img src={menuIng3} alt="Image" className="rounded-md" />
                                     <div className="ml-3 sm:ml-6">
-                                        <h3 className="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">Hot Latte #FC6</h3>
-                                        <div className="text-white text-md sm:text-lg font-light mb-1">M $11.75</div>
-                                        <div className="text-white text-md sm:text-lg font-light">L $14.75</div>
+                                        <h3 className="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">Hot Latte</h3>
+                                        <div className="text-white text-md sm:text-lg font-light mb-1">M -₹160</div>
+                                        <div className="text-white text-md sm:text-lg font-light">L -₹200</div>
                                     </div>
                                 </div>
                                 <div className="flex items-start mb-6 tm-menu-item">
                                     <img src={menuIng4} alt="Image" className="rounded-md" />
                                     <div className="ml-3 sm:ml-6">
                                         <h3 className="text-lg sm:text-xl tm-text-yellow mb-1">Hot Espresso</h3>
+                                        <div className="text-white text-md sm:text-lg font-light">L -₹160</div>
+
                                         <h3 className="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">Hot Chocolate</h3>
-                                        <div className="text-white text-md sm:text-lg font-light">Size M $11.75 . L $14.75</div>
+                                        <div className="text-white text-md sm:text-lg font-light">Size M -₹160 . L- ₹200</div>
                                     </div>
                                 </div>
                             </div>
                             <div className="flex-1 m-5 rounded-xl px-4 py-6 sm:px-8 sm:py-10 tm-bg-brown tm-item-container">
                                 <div className="flex items-start justify-end mb-6 tm-menu-item-2">
                                     <div className="text-right mr-6">
-                                        <h3 className="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">Iced Cappuccino</h3>
-                                        <div className="text-white text-md sm:text-lg font-light mb-1">Small $10</div>
-                                        <div className="text-white text-md sm:text-lg font-light">Large $15</div>
+                                        <h3 className="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">Filter Coffee -₹100</h3>
+                                        <div className="text-white text-md sm:text-lg font-light mb-1">Masala Chai -₹90</div>
+                                        <div className="text-white text-md sm:text-lg font-light">Ginger Tea - ₹90</div>
                                     </div>
                                     <img src={menuIng5} alt="Image" className="rounded-md" />
                                 </div>
                                 <div className="flex items-start justify-end mb-6 tm-menu-item-2">
-                                    <div className="text-right mr-6">
-                                        <h3 className="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">Iced Americano</h3>
-                                        <div className="text-white text-md sm:text-lg font-light mb-1">Small $12.50</div>
-                                        <div className="text-white text-md sm:text-lg font-light">Large $16.50</div>
+                                <div className="text-right mr-6">
+                                        <h3 className="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">Kashmiri Kahwa - ₹120</h3>
+                                        <div className="text-white text-md sm:text-lg font-light mb-1">Lemon Tea - ₹80</div>
+                                        {/* <div className="text-white text-md sm:text-lg font-light">Ginger Tea - ₹90</div> */}
                                     </div>
                                     <img src={menuIng6} alt="Image" className="rounded-md" />
                                 </div>
                                 <div className="flex items-start justify-end mb-6 tm-menu-item-2">
                                     <div className="text-right mr-6">
                                         <h3 className="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">Iced Milky Latte</h3>
-                                        <div className="text-white text-md sm:text-lg font-light mb-1">Small $14</div>
-                                        <div className="text-white text-md sm:text-lg font-light">Large $18</div>
+                                        <div className="text-white text-md sm:text-lg font-light mb-1">Small - ₹200</div>
+                                        <div className="text-white text-md sm:text-lg font-light">Large - ₹260</div>
                                     </div>
                                     <img src={menuIng7} alt="Image" className="rounded-md" />
                                 </div>
                                 <div className="flex items-start justify-end mb-6 tm-menu-item-2">
                                     <div className="text-right mr-6">
-                                        <h3 className="text-lg sm:text-xl tm-text-yellow mb-1">Iced Espresso</h3>
+                                        <h3 className="text-lg sm:text-xl tm-text-yellow mb-1">Iced Espresso - ₹135</h3>
                                         <h3 className="text-lg sm:text-xl mb-2 sm:mb-3 tm-text-yellow">Iced Mocha</h3>
-                                        <div className="text-white text-md sm:text-lg font-light">Small $10 . Large $15</div>
+                                        <div className="text-white text-md sm:text-lg font-light">Small - ₹135 . Large - ₹200</div>
                                     </div>
                                     <img src={menuIng8} alt="Image" className="rounded-md" />
                                 </div>
@@ -159,18 +167,28 @@ export default function Main({ scrolled }) {
                     <div className="container mx-auto tm-container py-24 sm:py-48">
                         <div className="tm-item-container sm:ml-auto sm:mr-12 mx-auto sm:px-0 px-4">
                             <div className="bg-white bg-opacity-80 p-12 pb-14 rounded-xl mb-5">
-                                <h2 className="mb-6 tm-text-green text-4xl font-medium">About our cafe</h2>
+                                <h2 className="mb-6 tm-text-green text-4xl font-medium">About Chennai Cafe</h2>
                                 <p className="mb-6 text-base leading-8">
-                                    Images are taken from Pexels, a great stock photo website. This template used Tailwind CSS. You may modify Antique Cafe template in any way you prefer and use it for your website.
-                                </p>
+                                    Chennai Cafe isn't just your average coffee spot; it's a welcoming haven nestled in the vibrant heart of
+                                    Chennai. Drawing inspiration from the rich tapestry of South Indian culture, our menu is a delightful
+                                    fusion of tradition and innovation. We're passionate about sourcing the finest ingredients to ensure that
+                                    each cup we serve is a masterpiece of flavor and quality.                                </p>
                                 <p className="text-base leading-8">
-                                    If you wish to <a rel="nofollow" href="https://www.tooplate.com/contact" target="_parent">support us</a>, please make a little donation via PayPal. That would be
-                                    very helpful. Another way is to tell your friends about Tooplate website. Thank you. </p>
+                                    If you wish to,
+                                    But Chennai Cafe is more than just a place to enjoy exceptional coffee; it's a hub of community and
+                                    connection. Our warm ambiance and friendly faces invite you to linger, whether you're seeking a quiet
+                                    moment of reflection or lively conversation. Here, friendships flourish, ideas spark, and memories are
+                                    made. </p> <br/>
+                                <p className="text-base leading-8">Step inside and discover a world where every sip tells a story, where the aroma of freshly brewed coffee
+                                    mingles with the sounds of laughter and conversation. Join us at Chennai Cafe, where we're not just
+                                    brewing coffee; we're crafting experiences.</p>
                             </div>
-                            <a href="#contact" className="inline-block tm-bg-green transition text-white text-xl pt-3 pb-4 px-8 rounded-md">
+                          <div className='mb-4 mt-3'>
+                          <a href="#contact" className="inline-block tm-bg-green transition text-white text-xl pt-3 pb-4 px-8 rounded-md ">
                                 <i className="far fa-comments mr-4"></i>
                                 Contact
                             </a>
+                          </div>
                         </div>
                     </div>
                 </div>
@@ -183,19 +201,21 @@ export default function Main({ scrolled }) {
                             <div className="flex-1 rounded-xl px-10 py-12 m-5 bg-white bg-opacity-80 tm-item-container">
                                 <h2 className="text-3xl mb-6 tm-text-green">Contact Us</h2>
                                 <p className="mb-6 text-lg leading-8">
-                                    Praesent tellus magna, consectetur sit amet volutpat eu, pulvinar vitae sem.
-                                    Sed ultrices. bg white 80% alpha. btn #066
+                                    We'd love to hear from you! Reach out to us via email or give us a call.
+                                    You can also swing by our cafe at Adyar. <br />
+                                    <span>Chennai during our opening hours. We're here to serve you with
+                                        a smile!</span>
                                 </p>
                                 <p className="mb-10 text-lg">
                                     <span className="block mb-2">Tel: <a href="tel:0100200340" className="hover:text-yellow-600 transition">010-020-0340</a></span>
-                                    <span className="block">Email: <a href="mailto:info@company.com" className="hover:text-yellow-600 transition">info@company.com</a></span>
+                                    <span className="block">Email: <a href="mailto:info@company.com" className="hover:text-yellow-600 transition">chennaicafe@hmail.com</a></span>
                                 </p>
-                                <div className="text-center">
+                                {/* <div className="text-center">
                                     <a href="https://www.google.com/maps" className="inline-block text-white text-2xl pl-10 pr-12 py-6 rounded-lg transition tm-bg-green">
                                         <i className="fas fa-map-marked-alt mr-8"></i>
                                         Open Maps
                                     </a>
-                                </div>
+                                </div> */}
                             </div>
                             <div className="flex-1 rounded-xl p-12 pb-14 m-5 bg-black bg-opacity-50 tm-item-container">
                                 <form action="" method="POST" className="text-lg">
@@ -209,9 +229,9 @@ export default function Main({ scrolled }) {
                             </div>
                         </div>
                         <footer className="absolute bottom-0 left-0 w-full">
-                            <div className="text-white container mx-auto tm-container p-8 text-lg flex flex-col md:flex-row justify-between">
-                                <span>Copyright 2022 Antique Cafe. All rights reserved.</span>
-                                <span className="mt-5 md:mt-0">Design: <a href="https://www.tooplate.com" target="_parent">Tooplate</a></span>
+                            <div className="text-white bg-black bg-opacity-70 text-center text-lg py-2">
+                                <span>Copyright 2024 Chennai Cafe.<br/> All rights reserved.</span>
+                                {/* <span className="mt-5 md:mt-0">Design: <a href="https://www.tooplate.com" target="_parent">Tooplate</a></span> */}
                             </div>
                         </footer>
                     </div>

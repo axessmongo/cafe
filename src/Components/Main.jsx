@@ -207,7 +207,7 @@ export default function Main({ scrolled }) {
                                         a smile!</span>
                                 </p>
                                 <p className="mb-10 text-lg">
-                                    <span className="block mb-2">Tel: <a href="tel:0100200340" className="hover:text-yellow-600 transition">010-020-0340</a></span>
+                                    {/* <span className="block mb-2">Tel: <a href="tel:0100200340" className="hover:text-yellow-600 transition">010-020-0340</a></span> */}
                                     <span className="block">Email: <a href="mailto:info@company.com" className="hover:text-yellow-600 transition">chennaicafe@hmail.com</a></span>
                                 </p>
                                 {/* <div className="text-center">
